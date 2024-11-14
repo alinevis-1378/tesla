@@ -1,0 +1,27 @@
+/* section::before {
+    content: '';
+    width: 22rem;
+    height: 1px;
+    background-color: #959595;
+    display: block;
+     margin: 0 auto; 
+     padding-top: 0rem;
+     margin-top: 1rem;
+ 
+}
+
+section::after {
+    content: '';
+    width: 22rem;
+    height: 2px;
+    background-color: #959595;
+    display: block;
+     margin: 0 auto; 
+     padding-top: 0rem; 
+     margin-top: 1rem; 
+} */
+
+.hr{
+    height: 2px;
+    background-color: #959595;
+}

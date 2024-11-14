@@ -1,0 +1,21 @@
+picture:before {
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: -1px;
+    height: 25px;
+    width: 25px;
+    -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    background: black;
+    z-index: 1;
+    /* top: 252.3rem; */
+}
+ .height{
+    height: calc(95vh - 226px)
+ }
+
+ .noghte{
+    background-image: radial-gradient(rgb(127, 127, 127) 1px, transparent 1px);
+    background-size: 20px 20px; /* اندازه نقطه‌ها و فاصله بین آن‌ها */
+ }

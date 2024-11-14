@@ -1,0 +1,17 @@
+.custom-input3 {
+    display: none!important;
+}
+
+.radio-label3{
+display: inline-block!important;
+cursor: pointer!important;
+}
+
+.radio-label3 div{
+border: 3px solid #dddbdb!important;
+transition: border 0.3s!important;
+}
+
+.custom-input3:checked + .radio-label3 div {
+    border-color: #07549d!important;
+}

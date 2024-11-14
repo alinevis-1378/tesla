@@ -1,0 +1,71 @@
+.custom-radio {
+    display: none!important; /* مخفی کردن radio button اصلی */
+}
+
+.radio-label {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.radio-label img {
+    width: 50px; /* عرض تصویر */
+    height: 50px; /* ارتفاع تصویر */
+    border: 3px solid transparent; /* مرز برای حالت انتخاب */
+    border-radius: 50%; /* گرد کردن مرز */
+    transition: border 0.3s;
+}
+
+.custom-radio:checked + .radio-label img {
+    border-color: blue; /* رنگ مرز در حالت انتخاب */
+}
+
+
+.custom-radio1 {
+    display: none!important; /* مخفی کردن radio button اصلی */
+}
+
+.radio-label1 {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.radio-label1 img {
+    width: 60px; /* عرض تصویر */
+    height: 60px; /* ارتفاع تصویر */
+    border: 3px solid transparent; /* مرز برای حالت انتخاب */
+    border-radius: 50%; /* گرد کردن مرز */
+    transition: border 0.3s;
+}
+
+.custom-radio1:checked + .radio-label1 img {
+    border-color: blue; /* رنگ مرز در حالت انتخاب */
+}
+
+
+
+.custom-radio2 {
+    display: none!important; /* مخفی کردن radio button اصلی */
+}
+
+.radio-label2 {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.radio-label2 img {
+    width: 60px; /* عرض تصویر */
+    height: 60px; /* ارتفاع تصویر */
+    border: 3px solid transparent; /* مرز برای حالت انتخاب */
+    border-radius: 50%; /* گرد کردن مرز */
+    transition: border 0.3s;
+}
+
+.custom-radio2:checked + .radio-label2 img {
+    border-color: blue; /* رنگ مرز در حالت انتخاب */
+}
+
+.myswiper1{
+    position: sticky!important;
+      top:11rem;
+      margin-left: 5rem;
+}
