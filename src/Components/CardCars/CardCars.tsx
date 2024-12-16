@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom"
 import { CarsType } from "../CarsType/CarsType.type"
-
+import Aos from "aos"
+import 'aos/dist/aos.css'
+import { useEffect } from "react"
 
 function CardCars({id ,image1 , model , oneTitr , twoTitr} : CarsType) {
 
+  useEffect(() => {
+  Aos.init({duration : 2000})
+  }, [])
 
   return (
    <>
    <div className='relative w-full h-screen flex items-start justify-center pt-[6rem]'>
-   <div className='absolute inset-0 pb-[48.5%]'>
+   <div className='absolute inset-0 pb-[48.5%]'  data-aos="fade-down">
     <img className='bg-gradient-to-tr block absolute top-0 left-0 w-full h-full object-cover' src={image1}/>
    </div>
 
