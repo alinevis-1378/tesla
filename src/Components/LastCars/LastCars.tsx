@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import CardCars from "../CardCars/CardCars"
-import Aos from "aos"
+
 
 
 const allDetailCars = [
@@ -54,7 +54,7 @@ function LastCars() {
   const [isLargScreen , setIsLargScreen] = useState(window.innerWidth > 639)
 
   useEffect(() => {
-   Aos.init()
+
     const handleResize = () => {
       setIsLargScreen(window.innerWidth > 639)
     }
