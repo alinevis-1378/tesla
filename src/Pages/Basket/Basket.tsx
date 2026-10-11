@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import HeaderShop from '../../Components/HeaderShop/HeaderShop'
 import './Basket.css'
 import CardInBasket from '../../Components/CardInBasket/CardInBasket'
 import { CartContext } from '../../Context/CartContext'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { JSX } from 'react/jsx-runtime'
-import { CardCarAccesory } from '../../Components/CardCarAccesooryType/CardCarAccesory.type'
-import { VscGlobe } from 'react-icons/vsc'
+
 function Basket() {
 
   const carContext = useContext(CartContext)

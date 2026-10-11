@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";

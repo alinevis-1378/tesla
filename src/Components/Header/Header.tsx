@@ -2,7 +2,6 @@ import  { useEffect, useState } from 'react'
 import { IoCloseOutline } from "react-icons/io5";
 import { GoQuestion } from "react-icons/go";
 import { TfiWorld } from "react-icons/tfi";
-import { HiOutlineUserCircle } from "react-icons/hi2";
 import { FaRegUserCircle } from "react-icons/fa";
 
 

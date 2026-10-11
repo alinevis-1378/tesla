@@ -7,7 +7,7 @@ type btnProps = {
     isBtnShop : boolean
 }
 
-function Button({btntext1 , btntext2 , isBtnWhite = false , isBtnShop = false} : btnProps) {
+function Button({btntext1 , btntext2 , isBtnWhite = false} : btnProps) {
   return (
    <>
    {isBtnWhite ? <div className="flex flex-col items-center justify-center absolute top-[37rem] left-[1.5rem] gap-y-[1rem]">

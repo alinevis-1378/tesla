@@ -1,5 +1,5 @@
 import  { useEffect, useState } from 'react'
-import Header from '../Header/Header'
+
 import './OneProduct.css'
 import { useParams } from 'react-router-dom'
 import { IoCloseOutline } from "react-icons/io5";

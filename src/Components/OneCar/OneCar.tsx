@@ -1,6 +1,6 @@
 import './OneCar.css'
 import { NavLink, Outlet } from 'react-router-dom'
-import Header from '../Header/Header'
+
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { IoCloseOutline } from "react-icons/io5";

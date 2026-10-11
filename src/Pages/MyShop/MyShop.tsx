@@ -1,4 +1,4 @@
-import { Autoplay, Scrollbar } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import HeaderShop from "../../Components/HeaderShop/HeaderShop"
 import OneAccessory from "../../Components/OneAccessory/OneAccessory"
 import OtherAccessory from "../../Components/OtherAccessiry/OtherAccessory"

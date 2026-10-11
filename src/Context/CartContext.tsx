@@ -1,98 +1,100 @@
+
 import { createContext, useEffect, useState } from "react";
-import { CardCarAccesory } from "../Components/CardCarAccesooryType/CardCarAccesory.type";
+
+
 
 
 type CartContextProviderProps = {
-children : React.ReactNode
-}
+    children : React.ReactNode
+    }
+    
+    type CartContextType = {
+            userCart : CardCarAccesooryContext[],
+            carAccesoryArry : CardCarAccesooryContext[],
+            addProduct : (id : number) => void,
+            removeProduct : (id : number) => void,
+        }
+        
+        type CardCarAccesooryContext = {
+                id : number,
+                image : string,
+                titr : string ,
+                price : number
+            }
+            
+            export const CartContext = createContext({} as CartContextType)
+            
+            const CartContextProvider = ({children} : CartContextProviderProps) =>  {
 
-type CartContextType = {
-    userCart : CardCarAccesooryContext[],
-    carAccesoryArry : CardCarAccesooryContext[],
-    addProduct : (id : number) => void,
-    removeProduct : (id : number) => void,
-}
-
-type CardCarAccesooryContext = {
-    id : number,
-    image : string,
-    titr : string ,
-    price : number
-}
-
-export const CartContext = createContext({} as CartContextType)
-
-const CartContextProvider = ({children} : CartContextProviderProps) =>  {
-
-    const [userCart , setUserCart] = useState<CardCarAccesooryContext[]>([])
-    useEffect(() => {
+                const [userCart , setUserCart] = useState<CardCarAccesooryContext[]>([])
+                useEffect(() => {
         const mainStored = localStorage.getItem('cartItems')
         if(mainStored){
-         setUserCart(JSON.parse(mainStored))
-        }
-     } , [])
-
-      useEffect(() => {
-        localStorage.setItem('cartItems', JSON.stringify(userCart));
-      } , [userCart])
-
-    const carAccesoryArry : CardCarAccesooryContext[] = [
-        {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/Vault/1988713-00-A-1-04.png',
-            titr: 'Cybertruck Tailgate Shield',
-            price: 300,
-            id: 1,
-
-        },
-        {
-            image: "https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/Vault/1988713-00-A-2-01.jpg",
-            titr: 'Cybertruck Jumpseat',
-            price: 100,
-            id: 2,
-        },
-        {
-            image: "https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/EXTERIOR/1987068-00-A_1_2000.jpg",
-            titr: 'Cybertruck Tailgate Ramp',
-            price: 400,
-            id: 3,
+             setUserCart(JSON.parse(mainStored))
+            }
+         } , [])
+    
+          useEffect(() => {
+                localStorage.setItem('cartItems', JSON.stringify(userCart));
+              } , [userCart])
+        
+            const carAccesoryArry : CardCarAccesooryContext[] = [
+                    {
+                            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/Vault/1988713-00-A-1-04.png',
+                            titr: 'Cybertruck Tailgate Shield',
+                            price: 300,
+                            id: 1,
+                
+                        },
+                        {
+                                image: "https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/Vault/1988713-00-A-2-01.jpg",
+                                titr: 'Cybertruck Jumpseat',
+                                price: 100,
+                                id: 2,
+                            },
+                            {
+                                    image: "https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/EXTERIOR/1987068-00-A_1_2000.jpg",
+                                    titr: 'Cybertruck Tailgate Ramp',
+                                    price: 400,
+                                    id: 3,
   
-        },
+                                },
         {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1979224-00-A-01.png',
-            titr: 'Cybertruck All-Weather Interior Liners',
+                image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1979224-00-A-01.png',
+                titr: 'Cybertruck All-Weather Interior Liners',
             price: 295,
             id: 4,
 
         },
         {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1877885-00-D-01.png',
-            titr: 'Cybertruck Carpet Interior Mats',
-            price: 155, 
-            id: 5,
-        },
+                image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1877885-00-D-01.png',
+                titr: 'Cybertruck Carpet Interior Mats',
+                price: 155, 
+                id: 5,
+            },
         {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1989035-00-A-3-01.png', titr: 'Cybertruck Front Trunk L-Track + Cargo Net',
-            price: 85,
-            id: 6,
-        },
-        {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1985774-00-A-01.jpg', titr: 'Cybertruck Pet Liner', price: 145,
-            id: 7,
-        },
-        {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1970873-00-B-01.png', titr: 'Cybertruck Underseat Storage Bin', price: 250,
-            id: 8,
-        },
-        {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1988715-00-A-01.png', titr: 'Cybertruck J1772 Adapter Door Dock', price: 30,
-            id: 9,
-        },
-        {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1967433-00-A-01.png', titr: 'Cybertruck Glass Roof Sunshade', price: 115, 
-            id: 10,
-        },
-        {
-            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1969033-00-A-01.png', titr: 'Cybertruck Center Console Tray', price: 40, 
+                image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1989035-00-A-3-01.png', titr: 'Cybertruck Front Trunk L-Track + Cargo Net',
+                price: 85,
+                id: 6,
+            },
+            {
+                    image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1985774-00-A-01.jpg', titr: 'Cybertruck Pet Liner', price: 145,
+                    id: 7,
+                },
+                {
+                        image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1970873-00-B-01.png', titr: 'Cybertruck Underseat Storage Bin', price: 250,
+                        id: 8,
+                    },
+                    {
+                            image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1988715-00-A-01.png', titr: 'Cybertruck J1772 Adapter Door Dock', price: 30,
+                            id: 9,
+                        },
+                        {
+                                image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1967433-00-A-01.png', titr: 'Cybertruck Glass Roof Sunshade', price: 115, 
+                                id: 10,
+                            },
+                            {
+                                    image: 'https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/CYBERTRUCK/INTERIOR/1969033-00-A-01.png', titr: 'Cybertruck Center Console Tray', price: 40, 
             id: 11,
         },
         {
@@ -1292,3 +1294,7 @@ const CartContextProvider = ({children} : CartContextProviderProps) =>  {
 }
 
 export default CartContextProvider
+
+
+
+

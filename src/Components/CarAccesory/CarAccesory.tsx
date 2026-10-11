@@ -502,7 +502,7 @@ function CarAccesory() {
     setSelectedItem(item);
   };
 
-    const renderCategory = (categoryName: string, items: any[] | undefined) => {
+    const renderCategory = (_categoryName: string, items: any[] | undefined) => {
       if (!items || items.length === 0) return null; // جلوگیری از رندر اگر آرایه خالی است
 
       return (

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { CardCarAccesory } from '../CardCarAccesooryType/CardCarAccesory.type'
 
 

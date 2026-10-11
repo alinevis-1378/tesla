@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import CardProduct from "../CardProduct/CardProduct"
-import Index from "../../Pages/Index/Index"
+
 
 
 
