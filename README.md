@@ -24,8 +24,26 @@ A fully responsive clone of the Tesla website, built with React, TypeScript, and
 
 ## 🚀 Getting Started
 
-```bash
-git clone https://github.com/alinevis-1378/tesla.git
-cd tesla
-npm install
-npm run dev
+Clone the repository and run it locally:
+
+    git clone https://github.com/alinevis-1378/tesla.git
+    cd tesla
+    npm install
+    npm run dev
+
+Open http://localhost:5173/tesla/ in your browser.
+
+## 📦 Build for Production
+
+    npm run build
+
+## 👤 Author
+
+**Ali Mardani**
+
+- GitHub: [@alinevis-1378](https://github.com/alinevis-1378)
+- Email: honarmandayahoo22@gmail.com
+
+## 📄 License
+
+This project is for educational purposes only. All Tesla branding and design belong to Tesla, Inc.
